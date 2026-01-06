@@ -59,7 +59,7 @@ def get_due_quiz():
             return item
     return None
 
-# --- Streamlit UI ---
+# Streamlit UI 
 st.title("Time-Based Quiz Bot")
 st.caption("Your chat will be saved, and you'll get a quiz 10 minutes after each question!")
 
@@ -95,7 +95,7 @@ if user_input:
     # Save interaction
     save_interaction(user_input, reply)
 
-# --- Check for quizzes ---
+# Check for quizzes
 quiz_item = get_due_quiz()
 if quiz_item:
     st.sidebar.header(" Quiz Time!")
@@ -123,3 +123,4 @@ if quiz_item:
             st.sidebar.markdown(eval_response.text)
         except Exception as e:
             st.sidebar.error(f"Error during evaluation: {e}")
+
